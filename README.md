@@ -1,8 +1,9 @@
 # UrlFinder
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/url_finder`. To experiment with that code, run `bin/console` for an interactive prompt.
+Find URLs in various file formats - supports markdown, HTML, CSV and regular text.
 
-TODO: Delete this and the text above, and describe your gem
+- [Usage](#usage)
+- [CLI](#cli)
 
 ## Installation
 
@@ -22,7 +23,46 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Find URLs in file, we will infer the format from the extension
+
+```ruby
+UrlFinder.from_file('README.md').each do |url|
+  puts "Found: #{url}"
+end
+```
+
+You can explicitly pass the format if the file lacks an extension
+
+```ruby
+UrlFinder.from_file('README', 'md').each do |url|
+  puts "Found: #{url}"
+end
+```
+
+Supported formats are `markdown` (aliased as `md`), `html`, `csv` and `string`.
+
+Find URLs in string
+```ruby
+html = '<a href="http://example.com">example.com</a>'
+UrlFinder.from(html, 'html').each do |url|
+  puts "Found: #{url}"
+end
+```
+
+## CLI
+
+```
+Usage: url_finder --help
+        --file=/path/to/file         Input file
+        --format=file_format         Input format (html, markdown, csv, string)
+    -h, --help                       How to use
+```
+
+## Wish list
+
+- Better CSV support
+  + Current support is extremely crude and makes a lot of assumptions about the file..
+- RDoc support
 
 ## Development
 
