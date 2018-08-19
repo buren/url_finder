@@ -13,6 +13,7 @@ module UrlFinder
       'md' => MarkdownReader,
       'html' => HTMLReader,
       'sitemap' => SitemapReader,
+      'sitemap.xml' => SitemapReader,
       'string' => StringReader,
       'txt' => StringReader,
     }.freeze

@@ -54,7 +54,7 @@ end
 ```
 Usage: url_finder --help
         --file=/path/to/file         Input file
-        --format=file_format         Input format (html, markdown, string)
+        --format=file_format         Input format (html, markdown, sitemap.xml, string)
     -h, --help                       How to use
 ```
 
