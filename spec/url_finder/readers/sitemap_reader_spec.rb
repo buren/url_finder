@@ -2,15 +2,9 @@ require 'spec_helper'
 
 require 'url_finder/readers/sitemap_reader'
 
-RSpec.describe UrlFinder::Sitemap do
+RSpec.describe UrlFinder::SitemapReader do
   describe '#new' do
-    it 'raises error REXML::ParseException when strict mode is true' do
-      expect do
-        described_class.new('<wat></wat><man></man>', strict: true)
-      end.to raise_error(REXML::ParseException)
-    end
-
-    it 'if strict mode false it swallows XML errors' do
+    it 'it swallows XML errors' do
       sitemap = described_class.new('<buren></buren><stam></stam>')
       expect(sitemap.urls).to be_empty
     end
