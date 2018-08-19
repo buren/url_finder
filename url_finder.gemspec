@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Jacob Burenstam']
   spec.email         = ['burenstam@gmail.com']
 
-  spec.summary       = 'Find URLs in common file formats (Markdown, HTML, CSV, string).'
-  spec.description   = 'Find URLs in common file formats (Markdown, HTML, CSV, string) with ease - Ruby and CLI.'
+  spec.summary       = 'Find URLs in common file formats (Markdown, HTML, string).'
+  spec.description   = 'Find URLs in common file formats (Markdown, HTML, string) with ease - Ruby and CLI.'
   spec.homepage      = 'https://github.com/buren/url_finder'
   spec.license       = 'MIT'
 

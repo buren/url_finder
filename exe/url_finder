@@ -16,7 +16,7 @@ OptionParser.new do |parser|
     options[:file] = string
   end
 
-  parser.on('--format=file_format', String, 'Input format (html, markdown, csv, string)') do |string|
+  parser.on('--format=file_format', String, 'Input format (html, markdown, string)') do |string|
     options[:format] = string
   end
 

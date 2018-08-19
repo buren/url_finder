@@ -9,7 +9,7 @@ module UrlFinder
   # @param [String] path to file
   # @param [String] file_format
   #   of file if nil file format will tried to be infered from
-  #   file extension (markdown, html, csv, string)
+  #   file extension (markdown, html, string)
   def self.from_file(path, file_format = nil)
     file_format ||= path.split('.').last
 
@@ -18,7 +18,7 @@ module UrlFinder
 
   # Find URLs in string
   # @param [String] content string
-  # @param [String] file_format of string (markdown, html, csv, string)
+  # @param [String] file_format of string (markdown, html, string)
   def self.from(content, file_format)
     Reader.new(content, file_format).urls
   end

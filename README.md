@@ -1,6 +1,6 @@
 # UrlFinder
 
-Find URLs in various file formats - supports markdown, HTML, CSV and regular text.
+Find URLs in various file formats - supports markdown, HTML and regular text.
 
 - [Usage](#usage)
 - [CLI](#cli)
@@ -39,7 +39,7 @@ UrlFinder.from_file('README', 'md').each do |url|
 end
 ```
 
-Supported formats are `markdown` (aliased as `md`), `html`, `csv` and `string`.
+Supported formats are `markdown` (aliased as `md`), `html` and `string`.
 
 Find URLs in string
 ```ruby
@@ -54,15 +54,15 @@ end
 ```
 Usage: url_finder --help
         --file=/path/to/file         Input file
-        --format=file_format         Input format (html, markdown, csv, string)
+        --format=file_format         Input format (html, markdown, string)
     -h, --help                       How to use
 ```
 
 ## Wish list
 
-- Better CSV support
-  + Current support is extremely crude and makes a lot of assumptions about the file..
 - RDoc support
+- Sitemap.xml support
+- and..?
 
 ## Development
 

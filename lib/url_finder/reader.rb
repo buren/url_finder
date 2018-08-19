@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'url_finder/readers/csv_reader'
 require 'url_finder/readers/html_reader'
 require 'url_finder/readers/markdown_reader'
 require 'url_finder/readers/string_reader'
@@ -12,7 +11,6 @@ module UrlFinder
       'markdown' => MarkdownReader,
       'md' => MarkdownReader,
       'html' => HTMLReader,
-      'csv' => CSVReader,
       'string' => StringReader,
       'txt' => StringReader,
     }.freeze
