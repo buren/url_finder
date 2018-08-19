@@ -12,3 +12,5 @@
 
 # This is a library so don't include the lock file
 Gemfile.lock
+
+.byebug_history
