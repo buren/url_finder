@@ -9,8 +9,10 @@ module UrlFinder
     # Returns the found URLs
     # @return [Array<String>] the found URLs
     def urls
-      document = Nokogiri::HTML(content)
-      @urls ||= document.css('a').map { |e| e['href'] }.compact
+      @urls ||= begin
+        document = Nokogiri::HTML(content)
+        document.css('a').map { |e| e['href'] }.compact
+      end
     end
   end
 end

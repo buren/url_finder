@@ -10,8 +10,10 @@ module UrlFinder
     # Returns the found URLs
     # @return [Array<String>] the found URLs
     def urls
-      html = Kramdown::Document.new(content).to_html
-      @urls ||= HTMLReader.new(html).urls
+      @urls ||= begin
+        html = Kramdown::Document.new(content).to_html
+        HTMLReader.new(html).urls
+      end
     end
   end
 end
