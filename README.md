@@ -5,6 +5,8 @@ Find URLs in various file formats - supports markdown, HTML and regular text.
 - [Usage](#usage)
 - [CLI](#cli)
 
+Supports: Markdown, HTML, strings (regex) and sitemap.xml.
+
 ## Installation
 
 Add this line to your application's Gemfile:
