@@ -20,6 +20,11 @@ OptionParser.new do |parser|
     options[:format] = string
   end
 
+  parser.on('-v', '--version', 'Print version') do
+    puts "UrlFinder version #{UrlFinder::VERSION}"
+    exit
+  end
+
   parser.on('-h', '--help', 'How to use') do
     puts parser
     exit
