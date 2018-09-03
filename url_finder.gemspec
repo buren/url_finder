@@ -24,10 +24,11 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  # TODO: Consider making kramdown & nokogiri optional
-  spec.add_dependency 'kramdown', '~> 1.17'
-  spec.add_dependency 'nokogiri', '~> 1.8'
+  # optional dependencies
+  spec.add_development_dependency 'kramdown', '~> 1.17'
+  spec.add_development_dependency 'nokogiri', '~> 1.8'
 
+  # dev dependencies
   spec.add_development_dependency 'bundler', '~> 1.16'
   spec.add_development_dependency 'byebug'
   spec.add_development_dependency 'yard'

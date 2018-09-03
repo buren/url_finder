@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
-require 'kramdown'
+begin
+  require 'kramdown'
+rescue LoadError
+end
+
 require 'url_finder/readers/base_reader'
 require 'url_finder/readers/html_reader'
 
@@ -11,6 +15,8 @@ module UrlFinder
     # @return [Array<String>] the found URLs
     def urls
       @urls ||= begin
+        raise('kramdown gem must be installed') unless defined?(Kramdown)
+
         html = Kramdown::Document.new(content).to_html
         HTMLReader.new(html).urls
       end
