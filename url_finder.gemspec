@@ -26,9 +26,9 @@ Gem::Specification.new do |spec|
 
   # TODO: Consider making kramdown & nokogiri optional
   spec.add_dependency 'kramdown', '~> 1.17'
-  spec.add_dependency 'nokogiri', '~> 1.8'
+  spec.add_dependency 'nokogiri', '~> 1.13'
 
-  spec.add_development_dependency 'bundler', '~> 1.16'
+  spec.add_development_dependency 'bundler', '~> 2.1'
   spec.add_development_dependency 'byebug'
   spec.add_development_dependency 'yard'
   spec.add_development_dependency 'rake', '~> 10.0'
